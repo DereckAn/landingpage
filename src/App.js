@@ -7,8 +7,10 @@ import './App.css';
 import { Navbar, Footer, Sidebar, Themesetter } from './components';
 import { Ecommers, Order, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 
+import { useStateContext } from './context/ContextProvider';
+
 const App = () => {
-  const activeMenu = false;
+  const { activeMenu } = useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -46,7 +48,7 @@ const App = () => {
             <div 
             className='fixed md:static bg-main-bg dark:bg-main-dark-bg
             navbar w-full '>
-              Navbar
+              <Navbar/>
             </div>
         </div>
 
