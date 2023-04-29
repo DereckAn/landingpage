@@ -4,6 +4,9 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 
+import { Navbar, Footer, Sidebar, Themesetter } from './components';
+import { Ecommers, Order, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+
 const App = () => {
   const activeMenu = false;
   return (
@@ -28,11 +31,11 @@ const App = () => {
         {activeMenu ? (
           <div 
           className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
-            Sidebar
+            <Sidebar />
           </div>
         ) : 
         (<div className='w-0 dark:bg-secondary-dark-bg '>
-          noSideBar
+            <Sidebar />
           </div>)
         }
 
@@ -49,12 +52,23 @@ const App = () => {
 
         <div>
           <Routes>
-            <Route path='/' element='Ecommerce'/>
-            <Route path='/ecommerce' element='Ecommerce'/>
+            {/*Dashdoard*/}
+            <Route path='/' element={<Ecommers/>}/>
+            <Route path='/ecommerce' element={<Ecommers/>}/>
 
-            <Route path='/orders' element='Orders'/>
-            <Route path='/employees' element='Employees'/>
-            <Route path='/customers' element='Customers'/>
+
+            {/*Pages*/}
+            <Route path='/orders' element={<Order/>}/>
+            <Route path='/employees' element={<Employees/>}/>
+            <Route path='/customers' element={<Customers/>}/>
+
+            {/*Pages*/}
+            <Route path='/kanban' element={<Kanban/>}/>
+            <Route path='/editor' element={<Editor/>}/>
+            <Route path='/calendar' element={<Calendar/>}/>
+            <Route path='/color-picker' element={<ColorPicker/>}/>
+
+
 
             
           </Routes>
