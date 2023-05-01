@@ -28,7 +28,8 @@ const Sidebar = () => {
           <Link to='/'
           onClick = {handleClose}
           className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
-            <SiShopware /> Embark
+            <img src='https://tall.global/embark/assets/img/Circle-Logo.png' className="w-10 h-10 rounded-full"/>
+             Embark
           </Link>
 
           <div content="Menu"

@@ -1,16 +1,15 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
+import { BsKanban, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
-import avatar from './avatar.jpg';
+import avatar from './pato.png';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
 import avatar4 from './avatar4.jpg';
@@ -42,6 +41,57 @@ export const gridOrderStatus = (props) => (
     {props.Status}
   </button>
 );
+
+ export const Construyendo_relaciones_genuinas = [
+  {
+    title: "Presentarse",
+    icon: avatar,
+  },
+  {
+    title: "Navegar por el entorno",
+    icon: avatar,
+  },
+  {
+    title: "Saludos y despedidas",
+    icon: avatar,
+  },
+  {
+    title: "Familia",
+    icon: avatar,
+  },
+  {
+    title: "La trinidad",
+    icon: avatar,
+  },
+  {
+    title: "Oracion",
+    icon: avatar,
+  },
+  {
+    title: "Identificar personas y objetos",
+    icon: avatar,
+  },
+  {
+    title: "El proposito del misionero",
+    icon: avatar,
+  },
+  {
+    title: "Referencias e intereses",
+    icon: avatar,
+  },
+  {
+    title: "Hablar sobre el clima",
+    icon: avatar,
+  },
+  {
+    title: "Identificar como estoy",
+    icon: avatar,
+  },
+  {
+    title: "Compart un testimonio simple",
+    icon: avatar,
+  },
+];
 
 export const kanbanGrid = [
   { headerText: 'To Do',
@@ -508,7 +558,7 @@ export const links = [
         icon: <RiContactsLine />,
       },
     ],
-  },
+  }, 
   {
     title: 'trabajo Previo',
     links: [
@@ -2151,7 +2201,6 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: 'Vinet',
-
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
     Location: 'USA',

@@ -1,8 +1,7 @@
 import React from 'react';
-import { BsCurrencyDollar } from 'react-icons/bs';
 import {GoPrimitiveDot} from 'react-icons/go';
-import {Stacked, Pie, Button, SparkLine, Header, ChartsHeader, Pie as PieChart  } from '../components';
-import { earningData, SparklineAreaData, ecomPieChartData, pieChartData } from '../data/dummy';
+import {Stacked, Button, SparkLine, Header, ChartsHeader, Pie as PieChart  } from '../components';
+import { earningData, SparklineAreaData, pieChartData } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
 
 

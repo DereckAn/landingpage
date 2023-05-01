@@ -5,7 +5,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommers, Order, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, HomeButt, ParaTi } from './pages';
+import { Order, Calendar, Employees, Customers, Kanban, Pie, ColorPicker, Editor, HomeButt, ParaTi, Construc } from './pages';
 import { links } from './data/dummy';
 
 import { useStateContext } from './context/ContextProvider';
@@ -71,14 +71,14 @@ const App = () => {
             {/*Pages*/}
             <Route path='/kanban' element={<Kanban/>}/>
             <Route path='/editor' element={<Editor/>}/>
-            <Route path='/calendar' element={<Calendar/>}/>
+            <Route path='/Compartir una Escritura' element={<Calendar/>}/>
             <Route path='/color-picker' element={<ColorPicker/>}/>
             <Route path='/El Plan de Salvación' element={<Pie/>}/>
 
+            {/* trabajo previo */}
+            <Route path='/Construyendo relaciones genuinas' element={<Construc/>}/>
 
-          {/* {links.map((link) => (
-            <Route key={link.id} path={link.url} element={<link.component/>}/>
-          ))} */}
+
 
 
 
