@@ -10,14 +10,14 @@ import { useStateContext } from '../context/ContextProvider';
 
 
 const Sidebar = () => {
-  const { activeMenu, setactiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setactiveMenu, screenSize, currentColor } = useStateContext();
 
   const handleClose = () => {
     if(activeMenu && screenSize <= 900) {
       setactiveMenu(false);
     }
   };
-  const activeLink = "frelx item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
+  const activeLink = "flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
   const normalLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-gray-700 text-md dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 
   return (
@@ -45,17 +45,18 @@ const Sidebar = () => {
 
         <div className='mt-10'>
           {links.map((link) => (
-            <div key={link.title}>
-              <p className='text-gray-400 m-3 mt-4 uppercase' >
+            <div key={link.title} >
+              <p className='text-gray-400 m-3 mt-4 uppercase ' >
                 {link.title}
               </p>
               {link.links.map((sublink) => (
                 <NavLink to={`/${sublink.name}`}
                 key={sublink.name}
                 onClick={handleClose}
+                style={({isActive})=> ({backgroundColor: isActive ? currentColor : ''})}
                 className={({isActive})=> isActive ? activeLink : normalLink}>
                   {sublink.icon}
-                  <span className="capitalize ">
+                  <span className="capitalize">
                     {sublink.name}
                   </span>
 
