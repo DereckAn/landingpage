@@ -1,9 +1,11 @@
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import {GoPrimitiveDot} from 'react-icons/go';
-import {Stacked, Pie, Button, SparkLine } from '../components';
-import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import {Stacked, Pie, Button, SparkLine, Header, ChartsHeader, Pie as PieChart  } from '../components';
+import { earningData, SparklineAreaData, ecomPieChartData, pieChartData } from '../data/dummy';
 import { useStateContext } from '../context/ContextProvider';
+
+
 
 const Ecommers = () => {
   const { currentColor } = useStateContext();
@@ -17,15 +19,15 @@ const Ecommers = () => {
         bg-no-repeat bg-cover bg-center'>
           <div className='flex justify-between items-center'>
             <div>
-              <p className='font-bold text-gray-400 '>Earnings</p>
-              <p className='text-2xl'>$45,489.23</p>
+              <p className='font-bold text-gray-400 '>Word of the day</p>
+              <p className='text-2xl'>Pais</p>
 
             </div>
           </div>
           <div className='mt-6 '>
             <Button color="white" 
             bgColor={currentColor}
-            text="Download"
+            text="Examples"
             borderRadius='10px'
             size='md'/>
           </div>
@@ -46,9 +48,9 @@ const Ecommers = () => {
                 <span className='text-lg font-semibold '>
                   {item.amount}
                 </span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                {/* <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
-                </span>
+                </span> */}
               </p>
                 <p className='text-sm text-gray-400 mt-1'>{item.title}</p>
 
@@ -60,49 +62,51 @@ const Ecommers = () => {
 
       <div className='flex gap-10 flex-wrap justify-center '>
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3  p-4 rounded-2xl md:w-780'>
+          
           <div className='flex justify-between'>
 
-            <p className='font-semibold text-xl'>revenue updates</p>
+            <p className='font-semibold text-xl'>Revisión espaciada</p>
 
             <div className='flex items-center gap-4'>
               <p className='flex item-center gap-2 text-gray-600 hover:drop-shadow-xl'>
                 <span><GoPrimitiveDot/></span>
-                <span>Expense</span>
+                <span>Words</span>
               </p>
 
               <p className='flex item-center gap-2 text-green-600 hover:drop-shadow-xl'>
                 <span><GoPrimitiveDot/></span>
-                <span>Budget</span>
+                <span>Lessons</span>
               </p>
             </div>
           </div>
 
           <div className='mt-10 flex gap-10 flex-wrap justify-center'>
-            <div className='border-r-1 border-color  m-4 pr-10 '>
+           
+           <div className='border-r-1 border-color  m-4 pr-10 '>
               <div>
                 <p>
-                  <span className='text-3xl font-semibold'>$93,345.98</span>
+                  <span className='text-3xl font-semibold'>93</span>
                   <span className='p-1.5 hover:drop-shadow-xl  cursor-pointer rounded-full text-white  bg-green-400 ml-3 text-xs'>%67</span>
                 </p>
-                <p className='text-gray-500 mt-1'>Budget</p>
+                <p className='text-gray-500 mt-1'>Words</p>
               </div>
 
               <div className='mt-8 '>
                 <p>
-                  <span className='text-3xl font-semibold'>$48,000.56</span>
+                  <span className='text-3xl font-semibold'>6/30</span>
                 </p>
-                <p className='text-gray-500 mt-1'>Expense</p>
+                <p className='text-gray-500 mt-1'>Lessons</p>
               </div>
 
               <div className='mt-5 '>
-                <SparkLine 
+                {/* <SparkLine 
                 currentColor={currentColor}
                 id="line-sparkline"
                 type="Line"
                 height="80px"
                 width="250px"
                 data={SparklineAreaData}
-                color={currentColor}/>
+                color={currentColor}/> */}
               </div>
 
               <div className='mt-10 '>
@@ -121,6 +125,15 @@ const Ecommers = () => {
           </div>
 
         </div>
+
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3  p-4 rounded-2xl md:w-780'>
+          <Header 
+          title='Your Progress' 
+          category="Basic"/>
+          <PieChart id="chart-pie" data={pieChartData} legendVisiblity height="full" />
+        </div>
+
+
       </div>
                 
 

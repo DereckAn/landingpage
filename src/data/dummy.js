@@ -62,7 +62,7 @@ export const kanbanGrid = [
     allowToggle: true },
 ];
 const gridEmployeeProfile = (props) => (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center gap-2 dark:bg-secondary-dark-bg">
     <img
       className="rounded-full w-10 h-10"
       src={props.EmployeeImage}
@@ -471,88 +471,114 @@ export const employeesGrid = [
 
 export const links = [
   {
-    title: 'Dashboard',
+    title: 'Dashboards',
     links: [
       {
-        name: 'ecommerce',
+        name: 'Para Ti',
         icon: <FiShoppingBag />,
       },
     ],
   },
 
   {
-    title: 'Pages',
+    title: 'Basico',
     links: [
       {
-        name: 'orders',
+        name: 'Alfabeto',
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'employees',
+        name:'Conocer a alguien',
         icon: <IoMdContacts />,
       },
       {
-        name: 'customers',
+        name: 'Ofrecer una Oracion',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'Testificar',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'Compartir una Escritura',
+        icon: <RiContactsLine />,
+      },
+      {
+        name: 'Dar una vision deneral',
         icon: <RiContactsLine />,
       },
     ],
   },
   {
-    title: 'Apps',
+    title: 'trabajo Previo',
     links: [
       {
-        name: 'calendar',
+        name: 'Construyendo relaciones genuinas',
         icon: <AiOutlineCalendar />,
       },
       {
-        name: 'kanban',
+        name: 'El Plan de Salvación',
         icon: <BsKanban />,
       },
       {
-        name: 'editor',
+        name: 'La Doctrina de Cristo',
         icon: <FiEdit />,
       },
       {
-        name: 'color-picker',
+        name: 'Convertir a otros a Cristo',
         icon: <BiColorFill />,
       },
     ],
   },
   {
-    title: 'Charts',
+    title: 'Vida Diaria',
     links: [
       {
-        name: 'line',
+        name: 'Vocabulario Común',
         icon: <AiOutlineStock />,
       },
       {
-        name: 'area',
+        name: 'Vida diaria',
         icon: <AiOutlineAreaChart />,
       },
 
       {
-        name: 'bar',
+        name: 'fuera del hogar',
         icon: <AiOutlineBarChart />,
       },
       {
-        name: 'pie',
+        name: 'Trabajo misionero',
         icon: <FiPieChart />,
       },
       {
-        name: 'financial',
+        name: 'Núcleo Básico 2',
         icon: <RiStockLine />,
       },
+    ],
+  },
+  {
+    title: 'Enseñando',
+    links: [
       {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
+        name: 'Lección 1',
+        icon: <AiOutlineStock />,
       },
       {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
+        name: 'Lección 2',
+        icon: <AiOutlineAreaChart />,
       },
+
       {
-        name: 'stacked',
+        name: 'Lección 3',
         icon: <AiOutlineBarChart />,
+      },
+      {
+        name: 'Lección 4',
+        icon: <FiPieChart />,
+      },
+      {
+        name: 'Lección 5',
+        icon: <RiStockLine />,
       },
     ],
   },
@@ -615,28 +641,28 @@ export const chatData = [
 
 export const earningData = [
   {
-    icon: <MdOutlineSupervisorAccount />,
-    amount: '39,354',
+    icon:  <BsBoxSeam />,
+    amount: 'Alfabeto        ',
     percentage: '-4%',
-    title: 'Customers',
+    title: 'Basic',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'red-600',
   },
   {
-    icon: <BsBoxSeam />,
-    amount: '4,396',
+    icon:<MdOutlineSupervisorAccount />,
+    amount: 'Conocer a Alguien',
     percentage: '+23%',
-    title: 'Products',
+    title: 'Basic',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
   },
   {
     icon: <FiBarChart />,
-    amount: '423,39',
+    amount: 'Ofrecer una Oracion',
     percentage: '+38%',
-    title: 'Sales',
+    title: 'Basic',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
 
@@ -644,9 +670,9 @@ export const earningData = [
   },
   {
     icon: <HiOutlineRefresh />,
-    amount: '39,354',
+    amount: 'El evangelio nos bendice',
     percentage: '-12%',
-    title: 'Refunds',
+    title: 'Basic',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -3119,13 +3145,13 @@ export const lineCustomSeries = [
 ];
 
 export const pieChartData = [
-  { x: 'Labour', y: 18, text: '18%' },
-  { x: 'Legal', y: 8, text: '8%' },
-  { x: 'Production', y: 15, text: '15%' },
-  { x: 'License', y: 11, text: '11%' },
-  { x: 'Facilities', y: 18, text: '18%' },
-  { x: 'Taxes', y: 14, text: '14%' },
-  { x: 'Insurance', y: 16, text: '16%' },
+  { x: 'Words', y: 18, text: '18%' },
+  { x: 'Lessons', y: 8, text: '8%' },
+  { x: 'Conversations', y: 15, text: '15%' },
+  { x: 'Escrituras', y: 11, text: '11%' },
+  { x: 'Numeros', y: 18, text: '18%' },
+  { x: 'Verbos', y: 14, text: '14%' },
+  { x: 'Familia', y: 16, text: '16%' },
 ];
 
 export const contextMenuItems = [
@@ -3180,7 +3206,7 @@ export const stackedCustomSeries = [
   { dataSource: stackedChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Budget',
+    name: 'Words',
     type: 'StackingColumn',
     background: 'blue',
 
@@ -3189,7 +3215,7 @@ export const stackedCustomSeries = [
   { dataSource: stackedChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'Expense',
+    name: 'Lessons',
     type: 'StackingColumn',
     background: 'red',
 

@@ -1,4 +1,4 @@
-export { default as Ecommers } from './Ecommers';
+export { default as ParaTi } from './Ecommers';
 export { default as Kanban } from './Kanban';
 export { default as Order } from './Order';
 export { default as Employees } from './Employees';
@@ -14,3 +14,5 @@ export { default as Line } from './Charts/Line';
 export { default as Pie } from './Charts/Pie';
 export { default as Pyramid } from './Charts/Pyramid';
 export { default as Stacked } from './Charts/Stacked';
+export { default as HomeButt } from './HomeButton';
+

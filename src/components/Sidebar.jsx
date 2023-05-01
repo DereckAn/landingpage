@@ -16,7 +16,7 @@ const Sidebar = () => {
     if(activeMenu && screenSize <= 900) {
       setactiveMenu(false);
     }
-  };
+  }; 
   const activeLink = "flex item-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
   const normalLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-gray-700 text-md dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2";
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
           <Link to='/'
           onClick = {handleClose}
           className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
-            <SiShopware /> Auxiliiioooooo!!!!
+            <SiShopware /> Embark
           </Link>
 
           <div content="Menu"

@@ -5,7 +5,8 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommers, Order, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { Ecommers, Order, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, HomeButt, ParaTi } from './pages';
+import { links } from './data/dummy';
 
 import { useStateContext } from './context/ContextProvider';
 
@@ -57,21 +58,27 @@ const App = () => {
 
           {themeSetter && <ThemeSettings />}
           <Routes>
-            {/*Dashdoard*/}
-            <Route path='/' element={<Ecommers/>}/>
-            <Route path='/ecommerce' element={<Ecommers/>}/>
+            {/* Dashdoard */}
+            <Route path='/' element={<HomeButt/>}/>
+            <Route path='/Para Ti' element={<ParaTi/>}/>
 
 
             {/*Pages*/}
-            <Route path='/orders' element={<Order/>}/>
-            <Route path='/employees' element={<Employees/>}/>
-            <Route path='/customers' element={<Customers/>}/>
+            <Route path='/Alfabeto' element={<Order/>}/>
+            <Route path='/Conocer a alguien' element={<Employees/>}/>
+            <Route path='/Ofrecer una Oracion' element={<Customers/>}/>
 
             {/*Pages*/}
             <Route path='/kanban' element={<Kanban/>}/>
             <Route path='/editor' element={<Editor/>}/>
             <Route path='/calendar' element={<Calendar/>}/>
             <Route path='/color-picker' element={<ColorPicker/>}/>
+            <Route path='/El Plan de Salvación' element={<Pie/>}/>
+
+
+          {/* {links.map((link) => (
+            <Route key={link.id} path={link.url} element={<link.component/>}/>
+          ))} */}
 
 
 
